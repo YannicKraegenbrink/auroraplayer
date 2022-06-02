@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import styles from '../../styles/songList.module.css';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -32,7 +33,7 @@ export default function SongList(): JSX.Element {
 
     return (
         <>
-            <div className="Songlist">
+            <div className={styles.Songlist}>
                 {Songs.map(Song =>
                     <List disablePadding>
                         <ListItem disablePadding>

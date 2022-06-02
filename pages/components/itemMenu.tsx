@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from '../../styles/itemMenu.module.css';
+
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -14,7 +16,7 @@ export default function ItemMenu(): JSX.Element {
 
     return (
         <>
-            <div className="ItemMenu">
+            <div>
                 {Menus.map(Menu =>
                     <ListItem disablePadding>
                         <ListItemButton>

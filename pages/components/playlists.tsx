@@ -1,5 +1,6 @@
 import React from "react";
 
+import styles from '../../styles/playlists.module.css';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -15,7 +16,7 @@ export default function Playlists(): JSX.Element {
 
     return (
         <>
-            <div className="Playlists">
+            <div className={styles.Playlists}>
                 {Playlists.map(Playlist =>
                     <ListItem disablePadding>
                         <ListItemButton>

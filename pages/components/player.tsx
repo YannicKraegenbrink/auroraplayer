@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player'
 
+import styles from '../../styles/player.module.css';
 
 import IconButton from '@mui/material/IconButton';
 import Slider from '@mui/material/Slider';
@@ -66,9 +67,9 @@ export default function Player(): JSX.Element {
     }
 
     return (
-        <>
-            <div className="Player">
-                <div className="Link">
+        <div>
+            <div className={styles.PlayerView}>
+                <div className={styles.Link}>
                     <IconButton onClick={paste} color="primary">
                         <FontAwesomeIcon icon={faPaste} />
                     </IconButton>
@@ -80,7 +81,7 @@ export default function Player(): JSX.Element {
                     playing={PlayPause}
                     volume={trueVolume}
                     controls={false} />
-                <div className="Controls">
+                <div className={styles.Controls}>
                     <IconButton onClick={playPauseAudio} color="primary" size="large">
                         {PlayPause == true && <FontAwesomeIcon icon={faPauseCircle} />}
                         {PlayPause == false && <FontAwesomeIcon icon={faPlayCircle} />}
@@ -91,6 +92,6 @@ export default function Player(): JSX.Element {
                     {isVolumeIcon == true && <Slider aria-label="Volume" value={volume} onChange={handleChange} />}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

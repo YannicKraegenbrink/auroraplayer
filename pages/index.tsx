@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import React from 'react';
 
+import styles from '../styles/index.module.css';
+
 import Playlists from './components/playlists';
 import ItemMenu from './components/itemMenu';
 import SongList from './components/songList';
@@ -11,16 +13,16 @@ import Divider from '@mui/material/Divider';
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="Main">
-        <div className="Sideview">
+      <div className={styles.Main}>
+        <div className={styles.Sideview}>
           <ItemMenu></ItemMenu>
           <Divider></Divider>
           <Playlists></Playlists>
         </div>
-        <div className="Songlist">
+        <div className={styles.Songlist}>
           <SongList></SongList>
         </div>
-        <div className="Player">
+        <div className={styles.Player}>
           <Player></Player>
         </div>
       </div>
